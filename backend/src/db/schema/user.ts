@@ -11,5 +11,6 @@ export const users = pgTable("users",{
 	location: text("location"),
 	status:		text("status"),
 	fcmToken: text("fcm_token"),
-	createdAt:timestamp("creaetd_at")
+	createdAt:timestamp("creaetd_at").defaultNow(),
+	updatedAt:timestamp("updated_at").defaultNow().$onUpdate(() => new Date())
 });

@@ -45,6 +45,7 @@
     "drizzle-orm": "^0.44.5",
     "express": "^5.1.0",
     "method-override": "^3.0.0",
+    "postgres": "^3.4.7",
     "typescript": "^5.9.2"
   },
   "devDependencies": {
