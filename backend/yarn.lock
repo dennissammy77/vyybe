@@ -2054,6 +2054,7 @@ __metadata:
     tslib: "npm:^2.8.1"
     tsx: "npm:^4.20.5"
     typescript: "npm:^5.9.2"
+    ulid: "npm:^3.0.1"
   languageName: unknown
   linkType: soft
 
@@ -5120,6 +5121,15 @@ __metadata:
   version: 1.5.0
   resolution: "uint8array-extras@npm:1.5.0"
   checksum: 10c0/0e74641ac7dadb02eadefc1ccdadba6010e007757bda824960de3c72bbe2b04e6d3af75648441f412148c4103261d54fcb60be45a2863beb76643a55fddba3bd
+  languageName: node
+  linkType: hard
+
+"ulid@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "ulid@npm:3.0.1"
+  bin:
+    ulid: dist/cli.js
+  checksum: 10c0/3b3eba4bea0d22fee7a7465d1d239f0bb20f604325a72fdb273085f18a2eeecf4391a967e8446f6d4eaa39f32fabe320a6d87846bd6313aacd2cd294d6d2b858
   languageName: node
   linkType: hard
 
