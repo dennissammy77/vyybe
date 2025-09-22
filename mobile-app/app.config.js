@@ -7,7 +7,7 @@ const appConfig = {
     version: packageJson.version,
     owner: packageJson.author,
     orientation: "portrait",
-    icon: "./assets/icon.png",
+    icon: "./assets/images/icon.png",
     scheme: "vyybeapp",
     userInterfaceStyle: "automatic",
     newArchEnabled: true,
