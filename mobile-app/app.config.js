@@ -37,6 +37,9 @@ const appConfig = {
         "@react-native-google-signin/google-signin",
       ],
       [
+        "@react-native-firebase/auth"
+      ],
+      [
         "expo-splash-screen",
         {
           image: "./assets/images/splash-icon.png",
