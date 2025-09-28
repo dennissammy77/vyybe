@@ -57,15 +57,8 @@ export class CreateUserDto {
   email: string;
 
   @Property(String)
-  mobile: string;
-
-  @Property(String)
   @Default("user")
   role: string;
-
-  @Property(String)
-  @Nullable(String)
-  fcmToken?: string;
 
   @Property(String)
   @Nullable(String)

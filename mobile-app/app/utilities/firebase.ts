@@ -37,8 +37,9 @@ export class FirebaseAuthUtils {
       // 3. Sign in with Firebase
       const userCredential = await auth().signInWithCredential(googleCredential);
 
-      console.log("Firebase user:", userCredential.user);
-      return userCredential.user
+      if(userCredential.user){
+        return this.getCurrentUser()
+      }
     } catch (error) {
       console.error("Google Sign-In error:", error);
       throw new Error("Google Sign-In error:")
