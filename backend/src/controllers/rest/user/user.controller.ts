@@ -7,4 +7,4 @@ export class HelloWorldController {
   get() {
     return "hello";
   }
-}
+};

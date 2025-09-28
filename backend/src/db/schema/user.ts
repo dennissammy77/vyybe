@@ -5,11 +5,12 @@ export const users = pgTable("users",{
 	name:			text("name").notNull(),
 	mobile:		text("mobile").notNull().unique(),
 	email:		text("email").notNull().unique(),
-	passHash: text("password_hash").notNull(),
+	bio:			text("bio"),
 	role:			text("role"),
 	photoUrl: text("photo_url"),
 	location: text("location"),
 	status:		text("status"),
 	fcmToken: text("fcm_token"),
-	createdAt:timestamp("creaetd_at")
+	createdAt:timestamp("creaetd_at").defaultNow(),
+	updatedAt:timestamp("updated_at").defaultNow().$onUpdate(() => new Date())
 });

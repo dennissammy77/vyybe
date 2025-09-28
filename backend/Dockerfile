@@ -20,7 +20,7 @@ ARG NODE_VERSION=20.11.0
 FROM node:${NODE_VERSION}-alpine AS build
 WORKDIR /opt
 
-COPY package.json yarn.lock yarn.lock tsconfig.json tsconfig.base.json tsconfig.node.json tsconfig.spec.json .barrels.json .swcrc ./
+COPY package.json yarn.lock yarn.lock tsconfig.json tsconfig.base.json tsconfig.node.json .barrels.json .swcrc ./
 
 RUN yarn set version berry
 RUN yarn install --immutable

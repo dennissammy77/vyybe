@@ -13,7 +13,7 @@ import * as rest from "./controllers/rest/index.js";
   httpPort: process.env.PORT || 8083,
   httpsPort: false, // CHANGE
   mount: {
-    "/rest": [
+    "/api": [
       ...Object.values(rest)
     ]
   },
