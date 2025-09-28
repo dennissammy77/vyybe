@@ -13,11 +13,19 @@ export default function HomeScreen() {
       console.error("Google Sign-In error:", error);
     }
   }
+  async function signOut() {
+    try {
+      await FirebaseAuthUtils.signOutUser();
+    } catch (error) {
+      console.error("Google Sign-Out error:", error);
+    }
+  }
   return (
     <SafeAreaView style={styles.container}>
       <View>
         <Text>Hello World</Text>
         <Button title="Sign in with Google" onPress={onGoogleButtonPress} />
+        <Button title="Sign out with Google" onPress={signOut} />
       </View>
     </SafeAreaView>
   );

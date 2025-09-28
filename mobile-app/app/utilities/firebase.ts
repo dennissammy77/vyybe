@@ -44,4 +44,20 @@ export class FirebaseAuthUtils {
       throw new Error("Google Sign-In error:")
     }
   };
+
+  static getCurrentUser = async()=>{
+    return await GoogleSignin.getCurrentUser();
+  }
+
+  static signOutUser = async()=>{
+    try {
+      GoogleSignin.configure({
+        webClientId: CONFIG.ANDROID_GOOGLE_WEB_CLIENT_KEY,
+      });
+      await GoogleSignin.signOut();
+      return;
+    } catch (error) {
+      console.error(error);
+    }
+  }
 };
