@@ -3,7 +3,7 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { persistReducer, persistStore } from 'redux-persist';
 import { authReducers, authRtkMiddlewares } from '../modules/auth/reducers';
 
-const rootReducer = () => combineReducers({
+const rootReducer = combineReducers({
   ...authReducers
 });
 
@@ -14,10 +14,10 @@ export const moduleRtkMiddlewares = [
 const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
-  whitelist: ['auth'],
+  whitelist: ['authReducer'],
 };
 
-const persistedReducer = persistReducer(persistConfig, rootReducer());
+const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({
   reducer: persistedReducer,
