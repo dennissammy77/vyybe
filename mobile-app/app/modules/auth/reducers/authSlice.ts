@@ -52,6 +52,11 @@ const authSlice = createSlice({
         sessionToken: null,
         expires: null
       };
+      try {
+        AsyncStorage.removeItem("Vyybe-Auth-Token");
+      } catch (error) {
+        console.error('Error removing access token:', error);
+      }
     },
   },
 });
