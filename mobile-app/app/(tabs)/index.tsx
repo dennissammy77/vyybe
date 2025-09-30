@@ -1,25 +1,26 @@
 import { Button, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { useDispatch } from 'react-redux';
+import { useLoginMutation } from '../modules/auth/api/auth.api';
+import { logout, setUserState } from '../modules/auth/reducers/authSlice';
 import { FirebaseAuthUtils } from '../utilities/firebase';
 import COLORS from '../utilities/theme';
-import { CONFIG } from '@/config';
 
 export default function HomeScreen() {
+  const [login, { isLoading, error }] = useLoginMutation();
+  const dispatch = useDispatch();
   async function onGoogleButtonPress() {
     try {
       const userToken = await FirebaseAuthUtils.signInWithGoogle();
 
       if (userToken) {
-        const response = await fetch(`${CONFIG.API_URL}/auth/login`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ idToken: userToken.idToken }),
-        });
-
-        const data = await response.json();
-        console.log("Server returned:", data);
+        const response = await login({ idToken: userToken.idToken })
+        dispatch(setUserState({
+          idToken: userToken.idToken!,
+          user: response?.data[0],
+        }));
+        console.log("userToken",userToken)
+        console.log("Server returned:", response?.data);
       }
     } catch (error) {
       console.error("Google Sign-In error:", error);
@@ -28,6 +29,8 @@ export default function HomeScreen() {
   async function signOut() {
     try {
       await FirebaseAuthUtils.signOutUser();
+      dispatch(logout());
+      console.log("User logged out")
     } catch (error) {
       console.error("Google Sign-Out error:", error);
     }

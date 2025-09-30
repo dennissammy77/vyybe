@@ -25,8 +25,8 @@ export default class AuthRepository {
       ));
 
     if (userWithCredentials.length > 0) return {
-      result_code: ResultEnum.EXISTS,
-      error: true, 
+      result_code: ResultEnum.SUCCESS,
+      error: false, 
       message: 'User already exists.', 
       data: userWithCredentials
     };
