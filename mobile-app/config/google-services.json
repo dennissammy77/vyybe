@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "836159986313",
+    "project_id": "vyybe-b8546",
+    "storage_bucket": "vyybe-b8546.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:836159986313:android:5cf2cf36bb03c2ddf1c458",
+        "android_client_info": {
+          "package_name": "com.vyybe.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "836159986313-bajrhsiqeku3vpqjefol2kc8c16iib9p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vyybe.app",
+            "certificate_hash": "b394469cd371ea6033c83ca120ed1ebd84e73952"
+          }
+        },
+        {
+          "client_id": "836159986313-k3n5t68k9burloqj7mae0l0dqlf9alla.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQ0DKZpCNQqxZP8F1z-9FR06-yuz7YNC4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "836159986313-k3n5t68k9burloqj7mae0l0dqlf9alla.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
