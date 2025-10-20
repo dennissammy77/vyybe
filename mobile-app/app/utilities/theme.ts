@@ -2,7 +2,7 @@ const COLORS = {
   light: {
     default: "",
     white: "#FFFFFF",
-    background: "#e4cfeeff",
+    background: "#FFFFFF",
     primary: "#c74dffff",
     gray: "#cfcad1ff",
   },

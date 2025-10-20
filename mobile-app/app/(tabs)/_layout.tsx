@@ -14,13 +14,8 @@ export default function TabLayout() {
         tabBarShowLabel: true,
         tabBarButton: HapticTab,
         tabBarStyle: {
-          position: 'absolute',
-          bottom: 24,
-          left: 20,
-          right: 20,
           elevation: 4,
           backgroundColor: COLORS.light.white,
-          borderRadius: 64,
           borderColor: COLORS.light.white,
           height: 70,
           shadowColor: COLORS.light.gray,
