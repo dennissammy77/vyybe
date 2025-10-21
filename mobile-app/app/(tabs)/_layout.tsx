@@ -30,6 +30,9 @@ export default function TabLayout() {
         tabBarLabelStyle: {
           fontSize: 12,
         },
+        sceneStyle: {
+          backgroundColor: COLORS.light.white
+        }
       }}>
       <Tabs.Screen
         name="index"
@@ -59,7 +62,7 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="profile"
+        name="account"
         options={{
           title: 'Profile',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="person.circle.fill" color={color} />,

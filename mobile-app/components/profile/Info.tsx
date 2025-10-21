@@ -3,6 +3,7 @@ import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { IconSymbol } from '../ui/icon-symbol';
 import ImageComponent from '../ui/Image';
+import { useRouter } from 'expo-router';
 
 type ProfileInfoProps = {
   name: string;
@@ -27,6 +28,7 @@ const ProfileInfoComponent: React.FC<ProfileInfoProps> = ({
   bio = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisi vel tincidunt fermentum...',
   isOwner = false
 }) => {
+  const router = useRouter();
   return (
     <View>
       {/* Header */}
@@ -39,7 +41,9 @@ const ProfileInfoComponent: React.FC<ProfileInfoProps> = ({
           </TouchableOpacity>
           <Text style={styles.username}>{username}</Text>
         </View>
-        <IconSymbol size={24} name="gear" color={COLORS.light.black} />
+        <TouchableOpacity onPress={() => router.push("/(tabs)/account/settings")}>
+          <IconSymbol size={24} name="gear" color={COLORS.light.black} />
+        </TouchableOpacity>
       </View>
 
       {/* Profile Info */}
