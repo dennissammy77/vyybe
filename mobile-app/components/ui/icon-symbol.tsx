@@ -27,7 +27,8 @@ const MAPPING = {
   'gearshape.fill': 'settings',
   'arrow.backward':'arrow-back',
   'shared.with.you':'share',
-  'gear': 'settings'
+  'gear': 'settings',
+  'pencil.circle':'edit'
 } as IconMapping;
 
 /**

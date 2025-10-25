@@ -77,7 +77,7 @@ const ProfileInfoComponent: React.FC<ProfileInfoProps> = ({
       </Text>
       <View style={styles.actions}>
         {isOwner ? 
-        <TouchableOpacity style={[styles.button, { backgroundColor: '#000' }]}>
+        <TouchableOpacity style={[styles.button, { backgroundColor: '#000' }]} onPress={() => router.push("/(tabs)/account/manage")}>
           <Text style={styles.buttonText}>Edit Profile</Text>
         </TouchableOpacity>
         :

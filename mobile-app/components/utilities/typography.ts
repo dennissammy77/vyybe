@@ -2,7 +2,7 @@ import { StyleProp, TextStyle } from 'react-native';
 
 // const FONT_FAMILY = 'Open_Sans';
 
-type FontName = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'h7' | 'h8' | 'h9' | 'h10' | 'title' | 'heading' | 'subHeading' | 'subTitle1' | 'subTitle2' | 'body' | 'bodyLarge' | 'bodyMedium' | 'bodySmall' | 'bodyXSmall' | 'body2XSmall' | 'caption';
+type FontName = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'h7' | 'h8' | 'h9' | 'h10' | 'title' | 'heading' | 'subHeading' | 'subTitle0' | 'subTitle1' | 'subTitle2' | 'body' | 'bodyLarge' | 'bodyMedium' | 'bodySmall' | 'bodyXSmall' | 'body2XSmall' | 'caption';
 
 const typography: { [font in FontName]: StyleProp<TextStyle> } = {
   h1: {
@@ -92,6 +92,13 @@ const typography: { [font in FontName]: StyleProp<TextStyle> } = {
     fontWeight: '600',
     lineHeight: 28,
     fontSize: 24
+  },
+
+  subTitle0: {
+    // fontFamily: FONT_FAMILY,
+    fontWeight: '500',
+    lineHeight: 18,
+    fontSize: 18
   },
 
   subTitle1: {
